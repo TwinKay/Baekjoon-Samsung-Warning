@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Samsung Algorithm Problem Warning",
+    "version": "1.0",
+    "description": "백준에서 삼성 코딩테스트 기출 문제에 접속하면 경고를 표시합니다.",
+    "permissions": [
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://www.acmicpc.net/problem/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.acmicpc.net/problem/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "style.css"
+            ]
+        }
+    ],
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    }
+}
