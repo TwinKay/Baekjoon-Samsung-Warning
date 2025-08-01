@@ -13,15 +13,23 @@ function getProblemIdFromUrl() {
 }
 
 function showSamsungWarning() {
+    if (document.querySelector('#samsung-warning-popup')) return;
+
     const popup = document.createElement('div');
     popup.id = 'samsung-warning-popup';
     popup.innerHTML = `
     <div class="popup-content">
       <p>🚨 <strong>해당 문제는 삼성 기출문제입니다!</strong></p>
       <p>주의하세요!</p>
+      <button id="samsung-warning-confirm">확인</button>
     </div>
   `;
     document.body.appendChild(popup);
+
+    // 버튼 클릭 시 팝업 제거
+    document.getElementById('samsung-warning-confirm').addEventListener('click', () => {
+        popup.remove();
+    });
 }
 
 const problemId = getProblemIdFromUrl();

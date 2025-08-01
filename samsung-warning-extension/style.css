@@ -19,3 +19,20 @@
 #samsung-warning-popup .popup-content p {
     margin: 10px 0;
 }
+
+#samsung-warning-popup button {
+    margin-top: 15px;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#samsung-warning-popup button:hover {
+    background-color: #d10000;
+}
